@@ -9477,6 +9477,8 @@ let quik = require('quik-client');
 (async () => {
   // setup of the "backend" object
   quik.backend = {
+    "getNames": "getNames",
+    "getQuotes": "getQuotes",
     "loginFolder": {
       "check": "loginFolder/check"
     },
@@ -9600,7 +9602,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49317" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49781" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

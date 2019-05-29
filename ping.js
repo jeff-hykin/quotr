@@ -2,7 +2,7 @@ let quik = {}
 ;;(async()=>{
 
             // setup of the "backend" object
-            quik.backend = {"loginFolder":{"check":"loginFolder/check"},"newQuote":"newQuote"}
+            quik.backend = {"getNames":"getNames","getQuotes":"getQuotes","newQuote":"newQuote"}
             global.io = require("socket.io-client")
             global.socket = new io.connect("http://localhost:3000", {
                 'reconnection': true
@@ -79,9 +79,10 @@ let quik = {}
 let {backend} = quik
 ;;(async()=>{
     try {
-        let output = backend.newQuote("topochico-king", "its alive")
+        let output = await backend.getQuotes("test-usr", "t")
+        console.log(`output is:`,output)
     } catch (e) {
-        console.log(`e is:`,e)
+        console.log(`e is:`,e.msg)
     }
-    // global.socket.close()
+    global.socket.close()
 })();;

@@ -1,7 +1,6 @@
 let { database, saveData } = require('./backend.js')
 
 module.exports = async (who, what) => {
-    try {
     console.log(`who is:`,who)
     console.log(`what is:`,what)
     // make sure the person exists
@@ -14,17 +13,11 @@ module.exports = async (who, what) => {
             quote: what
         }
     }
-    console.log('about to push')
     // add it to the database
-        database[who].push({
-            ...what,
-            date: Date.now()
-        })
-        console.log(`pushed data`)
-        // save it
-        saveData()
-    } catch (e) {
-        console.log(`e is:`,e)
-    }
-    console.log(`saved data`)
+    database[who].push({
+        ...what,
+        date: (new Date()).toString()
+    })
+    // save it
+    saveData()
 }

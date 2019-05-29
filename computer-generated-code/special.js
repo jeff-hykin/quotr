@@ -8,7 +8,7 @@ let quik = require('quik-client')
 ;;(async()=>{
 
             // setup of the "backend" object
-            quik.backend = {"loginFolder":{"check":"loginFolder/check"},"newQuote":"newQuote"}
+            quik.backend = {"getNames":"getNames","getQuotes":"getQuotes","loginFolder":{"check":"loginFolder/check"},"newQuote":"newQuote"}
             window.io = require("socket.io-client")
             window.socket = new io.connect("/", {
                 'reconnection': false
