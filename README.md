@@ -7,5 +7,6 @@ let { getQuotes, getNames, newQuote } = require('./path-to-api-file-from-this-re
     await newQuote('soygirl', "I'm not drunk I'm tipsey")
     let quotes = await getQuotes("soygirl")
     console.log("quotes are:", quotes)
+    global.socket.close()
 })();;
 ```
