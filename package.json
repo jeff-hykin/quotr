@@ -21,7 +21,8 @@
         "quik-dom": "^1.0.6",
         "quik-history": "^1.1.0",
         "quik-module-template": "^1.0.0",
-        "quik-server": "^2.0.0"
+        "quik-server": "^2.0.0",
+        "tar": ">=2.2.2"
     },
     "devDependencies": {
         "node-sass": "^4.11.0",
