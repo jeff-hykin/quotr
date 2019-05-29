@@ -191,58 +191,11 @@ module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"_css_loader":"../node_modules/parcel/src/builtins/css-loader.js"}],"../code/homePage.jsx":[function(require,module,exports) {
 module.exports = React.createElement("body", null, React.createElement("h1", null, "Nothing to see here... yet"));
-},{}],"../node_modules/quik-client/index.js":[function(require,module,exports) {
-// get the quik symbol
-let quikUniqueKey = Symbol.for("quik")
-// if the quik-window doesnt exist, then create it
-window[quikUniqueKey] || (window[quikUniqueKey] = {})
-// return the window-quik object
-module.exports = window[quikUniqueKey]
-
-},{}],"../code/loginFolder/loginPage.jsx":[function(require,module,exports) {
-let {
-  backend
-} = require('quik-client');
-
-let usernameElement, passwordElement;
-module.exports = React.createElement("body", null, React.createElement("div", {
-  class: "card blue-grey darken-1"
-}, React.createElement("div", {
-  class: "card-content white-text"
-}, React.createElement("span", {
-  class: "card-title"
-}, "Login"), usernameElement = React.createElement("input", {
-  type: "text",
-  placeholder: "username"
-}), passwordElement = React.createElement("input", {
-  type: "password",
-  placeholder: "password"
-})), React.createElement("div", {
-  class: "card-action"
-}, React.createElement("a", {
-  onclick: onclick
-}, "Submit"))));
-
-async function onclick(eventObject) {
-  try {
-    // call the function that is inside the check.backend.js file
-    let backendResponse = await backend.loginFolder.check({
-      username: usernameElement.value,
-      password: passwordElement.value
-    });
-    alert(backendResponse);
-  } catch (error) {
-    alert(`The backend thew an error: ${error}`);
-  }
-}
-},{"quik-client":"../node_modules/quik-client/index.js"}],"../website.jsx":[function(require,module,exports) {
+},{}],"../website.jsx":[function(require,module,exports) {
 //
 // Setup Head
 //
-document.head = React.createElement("head", null, React.createElement("title", null, "Quik Demo!"), React.createElement("link", {
-  rel: "stylesheet",
-  href: "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-})); // example of how to include a local style sheet (should work with css, sass, less)
+document.head = React.createElement("head", null, React.createElement("title", null, "Quotr!")); // example of how to include a local style sheet (should work with css, sass, less)
 
 require("./code/style.scss"); //
 // Setup Pages
@@ -251,7 +204,7 @@ require("./code/style.scss"); //
 
 let HomePage = require("./code/homePage");
 
-let LoginPage = require("./code/loginFolder/loginPage"); // Create the page-loading function (This is what you use to switch pages)
+let LoginPage = require("./code/style.scss"); // Create the page-loading function (This is what you use to switch pages)
 
 
 history.loadPage = function (path) {
@@ -260,9 +213,7 @@ history.loadPage = function (path) {
   if (path == "" || path == "home") {
     document.body = HomePage; // you dont have to assign document.body every time
     // you could just replace a specific peice instead of replacing the entire body
-    // Login page
-  } else if (path == "login") {
-    document.body = LoginPage; // Everywhere else
+    // 404 page
   } else {
     document.body = React.createElement("body", null, "I'm not sure what page you're trying to reach :/");
   }
@@ -271,7 +222,7 @@ history.loadPage = function (path) {
 
 let currentUrl = window.location.pathname.replace("/", "");
 history.loadPage(currentUrl);
-},{"./code/style.scss":"../code/style.scss","./code/homePage":"../code/homePage.jsx","./code/loginFolder/loginPage":"../code/loginFolder/loginPage.jsx"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./code/style.scss":"../code/style.scss","./code/homePage":"../code/homePage.jsx"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -299,7 +250,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49781" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50024" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
