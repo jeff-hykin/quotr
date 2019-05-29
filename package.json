@@ -1,20 +1,30 @@
 {
-  "name": "quotr",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jeff-hykin/quotr.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jeff-hykin/quotr/issues"
-  },
-  "homepage": "https://github.com/jeff-hykin/quotr#readme"
+    "name": "quik-app",
+    "version": "1.2.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "port": 3000,
+    "permissions": {
+        "login": "anyone"
+    },
+    "browserslist": "last 2 Chrome versions",
+    "dependencies": {
+        "parcel": "^1.12.3",
+        "quik-backend": "^1.1.0",
+        "quik-dom": "^1.0.6",
+        "quik-history": "^1.1.0",
+        "quik-module-template": "^1.0.0",
+        "quik-server": "^2.0.0"
+    },
+    "devDependencies": {
+        "node-sass": "^4.11.0",
+        "sass": "^1.20.1"
+    }
 }
