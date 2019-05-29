@@ -4,16 +4,13 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "start": "node server.js",
+        "start": "nodemon --ignore 'computer-generated-code/*' server.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "port": 3000,
-    "permissions": {
-        "login": "anyone"
-    },
     "browserslist": "last 2 Chrome versions",
     "dependencies": {
         "parcel": "^1.12.3",

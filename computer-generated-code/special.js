@@ -1,7 +1,7 @@
-let quik = require('quik-client')
+let quik = require('./node_modules/quik-client')
 ;;(async()=>{
 
-        require("good-jsx")
+        require("./node_modules/good-jsx")
     
 })();;
 
