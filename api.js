@@ -4,7 +4,7 @@ let quik = {}
             // setup of the "backend" object
             quik.backend = {"getNames":"getNames","getQuotes":"getQuotes","newQuote":"newQuote"}
             global.io = require("socket.io-client")
-            global.socket = new io.connect("http://134.209.57.254:3000:3000", {
+            global.socket = new io.connect("http://134.209.57.254:3000", {
                 'reconnection': true
             })
             // a helper for setting nested values 
