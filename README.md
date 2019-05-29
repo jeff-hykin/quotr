@@ -4,8 +4,8 @@
 let { getQuotes, getNames, newQuote } = require('./path-to-api-file-from-this-repo')
 
 ;;(async()=>{
-    await newQuote('soygirl', "I'm not drunk I'm tipsey")
-    let quotes = await getQuotes("soygirl")
+    await newQuote('gigachad', "The government can't add you to a list if you're already on all of them")
+    let quotes = await getQuotes("gigachad")
     console.log("quotes are:", quotes)
     global.socket.close()
 })();;
