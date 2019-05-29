@@ -77,12 +77,4 @@ let quik = {}
 
 
 let {backend} = quik
-;;(async()=>{
-    try {
-        let output = await backend.getQuotes("test-usr", "t")
-        console.log(`output is:`,output)
-    } catch (e) {
-        console.log(`e is:`,e.msg)
-    }
-    global.socket.close()
-})();;
+module.exports = backend
